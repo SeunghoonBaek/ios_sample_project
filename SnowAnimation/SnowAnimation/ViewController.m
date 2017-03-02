@@ -7,21 +7,30 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "SnowAniViewController.h"
 
 @implementation ViewController
 
+@synthesize infoButton;
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    // [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    SnowAniViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SnowAniViewController"];
+    
+    // Insert Snow View behind info button
+    [self.view insertSubview:viewController.view belowSubview:infoButton];
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL) prefersStatusBarHidden{
+    return YES;
 }
 
 @end
