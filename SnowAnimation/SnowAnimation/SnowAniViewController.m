@@ -33,8 +33,9 @@
         snowImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
         NSMutableArray* imageArray = [NSMutableArray array];
         
-        for(int i = 0 ; i <= 46 ; i++){
-            [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"snow-%d.tiff", i]]];
+        for(int i = 1 ; i <= 46 ; i++){
+            NSString* name = [NSString stringWithFormat:@"snow-%d.tiff", i];
+            [imageArray addObject:[UIImage imageNamed:name]];
         }
         
         snowImageView.animationImages = imageArray;
