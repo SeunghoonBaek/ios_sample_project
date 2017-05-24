@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
 
 @interface ViewController : UIViewController
 
 
+@property (weak, nonatomic) IBOutlet UIButton* infoButton;
+@property (strong, nonatomic) MainViewController* mainViewController;
 @end
 

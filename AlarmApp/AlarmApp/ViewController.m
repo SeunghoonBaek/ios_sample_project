@@ -8,13 +8,18 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
+@synthesize infoButton;
+@synthesize mainViewController;
+
 - (void)viewDidLoad {
+    MainViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    mainViewController = viewController;
+    
+    // Put MainViewController behind infoButton.
+    [self.view insertSubview:viewController.view belowSubview:infoButton];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
