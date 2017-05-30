@@ -10,6 +10,7 @@
 		1470FBCB1E7AF112002DBFDD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1470FBCA1E7AF112002DBFDD /* MainViewController.m */; };
 		1470FBD01E7AF6CD002DBFDD /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 1470FBCF1E7AF6CD002DBFDD /* clock.png */; };
 		148DE5C01ED5EAAA00879FD6 /* MainClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148DE5BF1ED5EAAA00879FD6 /* MainClockView.m */; };
+		1495FFF21EDB128C0036A52D /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1495FFF11EDB128C0036A52D /* SetupViewController.m */; };
 		14F8D7851E6DC774002F5D95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8D7841E6DC774002F5D95 /* main.m */; };
 		14F8D7881E6DC774002F5D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8D7871E6DC774002F5D95 /* AppDelegate.m */; };
 		14F8D78B1E6DC774002F5D95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8D78A1E6DC774002F5D95 /* ViewController.m */; };
@@ -44,6 +45,8 @@
 		1470FBCF1E7AF6CD002DBFDD /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clock.png; path = ../clock.png; sourceTree = "<group>"; };
 		148DE5BE1ED5EAAA00879FD6 /* MainClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainClockView.h; sourceTree = "<group>"; };
 		148DE5BF1ED5EAAA00879FD6 /* MainClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainClockView.m; sourceTree = "<group>"; };
+		1495FFF01EDB128C0036A52D /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		1495FFF11EDB128C0036A52D /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		14F8D7801E6DC774002F5D95 /* AlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F8D7841E6DC774002F5D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14F8D7861E6DC774002F5D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				148DE5BE1ED5EAAA00879FD6 /* MainClockView.h */,
 				148DE5BF1ED5EAAA00879FD6 /* MainClockView.m */,
 				14F8D78C1E6DC774002F5D95 /* Main.storyboard */,
+				1495FFF01EDB128C0036A52D /* SetupViewController.h */,
+				1495FFF11EDB128C0036A52D /* SetupViewController.m */,
 				1470FBC91E7AF112002DBFDD /* MainViewController.h */,
 				1470FBCA1E7AF112002DBFDD /* MainViewController.m */,
 				14F8D7921E6DC774002F5D95 /* Assets.xcassets */,
@@ -293,6 +298,7 @@
 			files = (
 				148DE5C01ED5EAAA00879FD6 /* MainClockView.m in Sources */,
 				14F8D78B1E6DC774002F5D95 /* ViewController.m in Sources */,
+				1495FFF21EDB128C0036A52D /* SetupViewController.m in Sources */,
 				14F8D7881E6DC774002F5D95 /* AppDelegate.m in Sources */,
 				14F8D7851E6DC774002F5D95 /* main.m in Sources */,
 				1470FBCB1E7AF112002DBFDD /* MainViewController.m in Sources */,

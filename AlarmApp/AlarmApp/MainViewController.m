@@ -44,12 +44,32 @@
     pClockView.pSecond = pSecond;
     
     [pClockView setNeedsDisplay];
+    
+    if(self.pAlarmOnOff == YES)
+    {
+        if(self.pAlarmHour == pHour && self.pAlarmMinute == pMinute && pSecond == 0)
+        {
+            [self messageDisplay];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void) messageDisplay
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"알람시계" message:@"약속시간입니다." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){} ];
+    
+    [alert addAction:defaultAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation
