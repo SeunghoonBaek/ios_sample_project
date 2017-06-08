@@ -21,9 +21,9 @@ typedef enum
 @interface PointData : NSObject
 
 @property(readonly, nonatomic)  NSMutableArray* points;
-@property(strong, nonatomic)    UIColor* pColor;
-@property                       float pWidth;
-@property                       TYPES pType;
+@property(strong, nonatomic)    UIColor*        pColor;
+@property                       float           pWidth;
+@property                       TYPES           pType;
 
 -(void) addPoint:(CGPoint) point;
 

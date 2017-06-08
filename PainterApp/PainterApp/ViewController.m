@@ -25,5 +25,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)PenClick
+{
+    [(MainPainterView *)self.view setCurType:PEN];
+}
+
+-(IBAction)LineClick
+{
+    [(MainPainterView *)self.view setCurType:LINE];
+}
+-(IBAction)CircleClick
+{
+    [(MainPainterView *)self.view setCurType:CIRCLE];
+}
+
+-(IBAction)EraseClick
+{
+    [(MainPainterView *)self.view setCurType:ERASE];
+}
+
+-(IBAction)RectClick
+{
+    [(MainPainterView *)self.view setCurType:RECT];
+}
+
 
 @end

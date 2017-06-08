@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainPainterView.h"
 
 @interface ViewController : UIViewController
 
