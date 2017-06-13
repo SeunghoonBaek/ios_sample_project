@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MainPainterView.h"
+#import "PainterSetupViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<PainterSetupViewDelegate>
+{
+    PainterSetupViewController* pPainterSetupViewController;
+}
 
 
 -(IBAction) PenClick;

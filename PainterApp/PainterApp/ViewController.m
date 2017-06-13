@@ -49,5 +49,27 @@
     [(MainPainterView *)self.view setCurType:RECT];
 }
 
+-(IBAction) SettingClick
+{
+    if(pPainterSetupViewController == nil)
+    {
+        PainterSetupViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PainterSetupViewController"];
+        
+        viewController.delegate = self;
+        pPainterSetupViewController = viewController;
+    }
+    
+    [self presentViewController:pPainterSetupViewController animated:YES completion:nil];
+}
+
+-(void)painterSetupViewController:(PainterSetupViewController *)controller setColor:(UIColor *)color
+{
+    [(MainPainterView *)self.view setCurColor:color];
+}
+
+-(void)painterSetupViewController:(PainterSetupViewController *)controller setWidth:(float)width
+{
+    [(MainPainterView *)self.view setCurWidth:width];
+}
 
 @end

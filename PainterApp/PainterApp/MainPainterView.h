@@ -28,6 +28,6 @@
 -(void) drawFillRect:(PointData *)pData inContext:(CGContextRef)context;
 -(void) initCurPointData;
 -(void) setCurType:(TYPES)type;
--(void) setCurColre:(UIColor *)color;
+-(void) setCurColor:(UIColor *)color;
 -(void) setCurWidth:(float)width;
 @end

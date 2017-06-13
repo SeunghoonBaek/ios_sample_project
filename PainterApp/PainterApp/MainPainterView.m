@@ -40,7 +40,7 @@
     [curPointData setPType:type];
 }
 
--(void) setCurColre:(UIColor *)color
+-(void) setCurColor:(UIColor *)color
 {
     pCurColor = color;
     [curPointData setPColor:color];

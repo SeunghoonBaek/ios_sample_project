@@ -15,6 +15,7 @@
 		148601661EE712760074B6E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148601641EE712760074B6E3 /* LaunchScreen.storyboard */; };
 		1486016F1EE713C70074B6E3 /* PointData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486016E1EE713C70074B6E3 /* PointData.m */; };
 		148601721EE714FE0074B6E3 /* MainPainterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148601711EE714FE0074B6E3 /* MainPainterView.m */; };
+		14B4E7A71EF0544F004B4EBF /* PainterSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4E7A61EF0544F004B4EBF /* PainterSetupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		1486016E1EE713C70074B6E3 /* PointData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointData.m; sourceTree = "<group>"; };
 		148601701EE714FE0074B6E3 /* MainPainterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPainterView.h; sourceTree = "<group>"; };
 		148601711EE714FE0074B6E3 /* MainPainterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPainterView.m; sourceTree = "<group>"; };
+		14B4E7A51EF0544F004B4EBF /* PainterSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PainterSetupViewController.h; sourceTree = "<group>"; };
+		14B4E7A61EF0544F004B4EBF /* PainterSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PainterSetupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				1486015C1EE712760074B6E3 /* ViewController.h */,
 				1486015D1EE712760074B6E3 /* ViewController.m */,
 				1486015F1EE712760074B6E3 /* Main.storyboard */,
+				14B4E7A51EF0544F004B4EBF /* PainterSetupViewController.h */,
+				14B4E7A61EF0544F004B4EBF /* PainterSetupViewController.m */,
 				1486016D1EE713C70074B6E3 /* PointData.h */,
 				1486016E1EE713C70074B6E3 /* PointData.m */,
 				148601701EE714FE0074B6E3 /* MainPainterView.h */,
@@ -161,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B4E7A71EF0544F004B4EBF /* PainterSetupViewController.m in Sources */,
 				1486015E1EE712760074B6E3 /* ViewController.m in Sources */,
 				1486015B1EE712760074B6E3 /* AppDelegate.m in Sources */,
 				1486016F1EE713C70074B6E3 /* PointData.m in Sources */,
@@ -324,6 +330,7 @@
 				1486016C1EE712760074B6E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
