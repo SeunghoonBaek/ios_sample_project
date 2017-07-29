@@ -65,6 +65,56 @@ typedef enum{
     return img;
 }
 
+#pragma mark -
+#pragma mark ImageProcessing
+-(id)getGrayImage{
+    for(int y = 0 ; y < imageHeight ; y++){
+        for(int x = 0 ; x < imageWidth ; x++){
+            uint8_t* pRawImage = (uint8_t *) &rawImage[(y * imageWidth + x) * 4];
+            uint32_t gray = 0.299 * pRawImage[RED] + 0.587 * pRawImage[GREEN] + 0.114 * pRawImage[BLUE];
+            
+            pRawImage[RED] = (unsigned char) gray;
+            pRawImage[GREEN] = (unsigned char) gray;
+            pRawImage[BLUE] = (unsigned char) gray;
+        }
+    }
+    
+    return self;
+}
 
+-(id) getInverseImage{
+    for(int y = 0 ; y < imageHeight ; y++){
+        for(int x = 0 ; x < imageWidth ; x++){
+            uint8_t* pRawImage = (uint8_t *) &rawImage[(y * imageWidth + x) * 4];
+            
+            pRawImage[RED] = 255 - pRawImage[RED];
+            pRawImage[GREEN] = 255 - pRawImage[GREEN];
+            pRawImage[BLUE] = 255 - pRawImage[BLUE];
+        }
+    }
+    
+    return self;
+}
+
+int getOffset(int x, int y, int width, int index){
+    return y * width * 4 + x * 4 + index;
+}
+
+-(id) getTrackingImage{
+    [selfgetGrayImage];
+    
+    // Sobal mask X, y
+    int matrixX[9] = {
+        -1, 0, 1,
+        -2, 0, 2,
+        -1, 0, 1
+    };
+    
+    int matrixY[9] = {
+        -1, -2, -1,
+        0, 0, 0,
+        1, 2, 1
+    };
+}
 
 @end
