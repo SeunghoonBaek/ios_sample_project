@@ -38,7 +38,15 @@ typedef enum{
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     
-    CGContextRef context = CGBitmapContextCreate(rawImage, imageWidth, imageHeight, 8, imageWidth * imageHeight * sizeof(uint32_t), colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedLast);
+    CGContextRef context = CGBitmapContextCreate(
+                                                 rawImage,
+                                                 imageWidth,
+                                                 imageHeight,
+                                                 8,
+                                                 imageWidth * sizeof(uint32_t),
+                                                 colorSpace,
+                                                 kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedLast)
+    ;
     
     CGContextDrawImage(context, CGRectMake(0, 0, imageWidth, imageHeight), image.CGImage);
     CGContextRelease(context);
@@ -57,6 +65,26 @@ typedef enum{
     
     CGColorSpaceRelease(colorSpace);
     
+    CGImageRef ref = CGBitmapContextCreateImage(context);
+    
+    CGContextRelease(context);
+    UIImage* img = [UIImage imageWithCGImage:ref];
+    CFRelease(ref);
+    return img;
+}
+
+-(UIImage *) BitmapToUIImage{
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(
+                                                 rawImage,
+                                                 imageWidth,
+                                                 imageHeight,
+                                                 8,
+                                                 imageWidth * 4,
+                                                 colorSpace,
+                                                 kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedLast);
+    
+    CGColorSpaceRelease(colorSpace);
     CGImageRef ref = CGBitmapContextCreateImage(context);
     
     CGContextRelease(context);
@@ -101,7 +129,7 @@ int getOffset(int x, int y, int width, int index){
 }
 
 -(id) getTrackingImage{
-    [selfgetGrayImage];
+    [self getGrayImage];
     
     // Sobal mask X, y
     int matrixX[9] = {
@@ -115,6 +143,49 @@ int getOffset(int x, int y, int width, int index){
         0, 0, 0,
         1, 2, 1
     };
+    
+    for(int y = 0 ; y < imageHeight ; y++){
+        for(int x  = 0 ; x < imageWidth ; x++){
+            int sumr1 = 0;
+            int sumr2 = 0;
+            int sumg1 = 0;
+            int sumg2 = 0;
+            int sumb1 = 0;
+            int sumb2 = 0;
+            
+            int offset = 0;
+            for( int j = 0; j <= 2 ; j++){
+                for( int i = 0 ; i <= 2 ; i++){
+                    sumr1 += *(rawImage + getOffset(x+i, y+j, imageWidth, RED)) * matrixX[offset];
+                    sumr2 += *(rawImage + getOffset(x+i, y+j, imageWidth, RED)) * matrixY[offset];
+                    sumg1 += *(rawImage + getOffset(x+i, y+j, imageWidth, GREEN)) * matrixX[offset];
+                    sumg2 += *(rawImage + getOffset(x+i, y+j, imageWidth, GREEN)) * matrixY[offset];
+                    sumb1 += *(rawImage + getOffset(x+i, y+j, imageWidth, BLUE)) * matrixX[offset];
+                    sumb2 += *(rawImage + getOffset(x+i, y+j, imageWidth, BLUE)) * matrixY[offset];
+                }
+                
+                offset++;
+            }
+            
+            int sumR = MIN(((ABS(sumr1) + ABS(sumr2)) / 2), 255);
+            int sumG = MIN(((ABS(sumg1) + ABS(sumg2)) / 2), 255);
+            int sumB = MIN(((ABS(sumb1) + ABS(sumb2)) / 2), 255);
+            
+            uint8_t* pRawImage = (uint8_t *) &rawImage[(y * imageWidth + x) * 4];
+            pRawImage[RED] = (unsigned char) sumR;
+            pRawImage[GREEN] = (unsigned char) sumG;
+            pRawImage[BLUE] = (unsigned char) sumB;
+        }
+    }
+    
+    return self;
+}
+
+-(void) DataInit{
+    if(rawImage){
+        free(rawImage);
+        rawImage = nil;
+    }
 }
 
 @end

@@ -13,7 +13,7 @@
 @interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     ImageProcInfoViewController* pImageProcInfoViewController;
-    IBOutlet UIButton* infoButton
+    IBOutlet UIButton* infoButton;
     IBOutlet UIImageView* pImageView;
     
     ImageProcessing* pImageProcessing;
