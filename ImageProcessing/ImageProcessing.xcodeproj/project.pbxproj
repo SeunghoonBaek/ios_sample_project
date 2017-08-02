@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14124E1F1F2DA51D00F43C57 /* ImageProcInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14124E1E1F2DA51D00F43C57 /* ImageProcInfoViewController.m */; };
+		14124E211F2DA7D400F43C57 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 14124E201F2DA7D400F43C57 /* default.png */; };
 		1447AA451F2A3E30002AFA87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447AA441F2A3E30002AFA87 /* main.m */; };
 		1447AA481F2A3E30002AFA87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447AA471F2A3E30002AFA87 /* AppDelegate.m */; };
 		1447AA4B1F2A3E30002AFA87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1447AA4A1F2A3E30002AFA87 /* ViewController.m */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14124E1D1F2DA51D00F43C57 /* ImageProcInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcInfoViewController.h; sourceTree = "<group>"; };
+		14124E1E1F2DA51D00F43C57 /* ImageProcInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcInfoViewController.m; sourceTree = "<group>"; };
+		14124E201F2DA7D400F43C57 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		1447AA401F2A3E30002AFA87 /* ImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1447AA441F2A3E30002AFA87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1447AA461F2A3E30002AFA87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +77,9 @@
 				1447AA431F2A3E30002AFA87 /* Supporting Files */,
 				1447AA5A1F2A485A002AFA87 /* ImageProcessing.h */,
 				1447AA5B1F2A485A002AFA87 /* ImageProcessing.m */,
+				14124E1D1F2DA51D00F43C57 /* ImageProcInfoViewController.h */,
+				14124E1E1F2DA51D00F43C57 /* ImageProcInfoViewController.m */,
+				14124E201F2DA7D400F43C57 /* default.png */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 				1447AA531F2A3E30002AFA87 /* LaunchScreen.storyboard in Resources */,
 				1447AA501F2A3E30002AFA87 /* Assets.xcassets in Resources */,
 				1447AA4E1F2A3E30002AFA87 /* Main.storyboard in Resources */,
+				14124E211F2DA7D400F43C57 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14124E1F1F2DA51D00F43C57 /* ImageProcInfoViewController.m in Sources */,
 				1447AA5C1F2A485A002AFA87 /* ImageProcessing.m in Sources */,
 				1447AA4B1F2A3E30002AFA87 /* ViewController.m in Sources */,
 				1447AA481F2A3E30002AFA87 /* AppDelegate.m in Sources */,
@@ -318,6 +328,7 @@
 				1447AA591F2A3E30002AFA87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
