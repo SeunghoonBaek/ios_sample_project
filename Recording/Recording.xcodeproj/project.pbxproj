@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		147932A71F38B46200AA2140 /* MeterGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147932A61F38B46200AA2140 /* MeterGaugeView.m */; };
+		147932AB1F38BE5000AA2140 /* RecordDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 147932AA1F38BE5000AA2140 /* RecordDataBase.m */; };
 		14F407701F322C5700B2974E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F4076F1F322C5700B2974E /* main.m */; };
 		14F407731F322C5700B2974E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F407721F322C5700B2974E /* AppDelegate.m */; };
 		14F407761F322C5700B2974E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F407751F322C5700B2974E /* ViewController.m */; };
@@ -20,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		147932A51F38B46200AA2140 /* MeterGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeterGaugeView.h; path = ../MeterGaugeView.h; sourceTree = "<group>"; };
+		147932A61F38B46200AA2140 /* MeterGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeterGaugeView.m; path = ../MeterGaugeView.m; sourceTree = "<group>"; };
+		147932A81F38BE2A00AA2140 /* RecordDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = RecordDB.sqlite; path = ../../../../Desktop/RecordDB.sqlite; sourceTree = "<group>"; };
+		147932A91F38BE5000AA2140 /* RecordDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDataBase.h; sourceTree = "<group>"; };
+		147932AA1F38BE5000AA2140 /* RecordDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDataBase.m; sourceTree = "<group>"; };
 		14F4076B1F322C5700B2974E /* Recording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recording.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F4076F1F322C5700B2974E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14F407711F322C5700B2974E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 		14F4076D1F322C5700B2974E /* Recording */ = {
 			isa = PBXGroup;
 			children = (
+				147932A81F38BE2A00AA2140 /* RecordDB.sqlite */,
 				14F407711F322C5700B2974E /* AppDelegate.h */,
 				14F407721F322C5700B2974E /* AppDelegate.m */,
 				14F407741F322C5700B2974E /* ViewController.h */,
@@ -78,6 +86,10 @@
 				14F407771F322C5700B2974E /* Main.storyboard */,
 				14F4078C1F322CF100B2974E /* RecordViewController.h */,
 				14F4078D1F322CF100B2974E /* RecordViewController.m */,
+				147932A91F38BE5000AA2140 /* RecordDataBase.h */,
+				147932AA1F38BE5000AA2140 /* RecordDataBase.m */,
+				147932A51F38B46200AA2140 /* MeterGaugeView.h */,
+				147932A61F38B46200AA2140 /* MeterGaugeView.m */,
 				14F4077A1F322C5700B2974E /* Assets.xcassets */,
 				14F4077C1F322C5700B2974E /* LaunchScreen.storyboard */,
 				14F4077F1F322C5700B2974E /* Info.plist */,
@@ -178,6 +190,8 @@
 			files = (
 				14F407761F322C5700B2974E /* ViewController.m in Sources */,
 				14F407731F322C5700B2974E /* AppDelegate.m in Sources */,
+				147932A71F38B46200AA2140 /* MeterGaugeView.m in Sources */,
+				147932AB1F38BE5000AA2140 /* RecordDataBase.m in Sources */,
 				14F407701F322C5700B2974E /* main.m in Sources */,
 				14F4078E1F322CF100B2974E /* RecordViewController.m in Sources */,
 			);
@@ -338,6 +352,7 @@
 				14F407841F322C5700B2974E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

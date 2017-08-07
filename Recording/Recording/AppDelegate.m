@@ -17,7 +17,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self CopyOfDataBaseIfNeeded];
     return YES;
+}
+
+-(BOOL) CopyOfDataBaseIfNeeded{
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentDirectory = [paths objectAtIndex:0];
+    NSString* myPath = [documentDirectory stringByAppendingPathComponent:@"RecordDB.sqlite"];
+    
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    BOOL exist = [fileManager fileExistsAtPath:myPath];
+    
+    if(exist){
+        NSLog(@"DB had existed");
+        return TRUE;
+    }
+    
+    NSString* defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"RecordDB.sqlite"];
+    
+    return [fileManager copyItemAtPath:defaultDBPath toPath:myPath error:nil];
 }
 
 

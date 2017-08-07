@@ -14,5 +14,28 @@
 #import "RecordDataBase.h"
 
 @interface RecordViewController : UIViewController<AVAudioRecorderDelegate>
+{
+    IBOutlet UIButton* pRecordButton;
+    IBOutlet UILabel* recordTimeDisplay;
+    IBOutlet MeterGaugeView* pGaugeView;
+    IBOutlet UIBarButtonItem* listView;
+    NSTimer* timer;
+    double plowPassResults;
+    RecordDataBase* pDataBase;
+    
+    NSString* pRecordSeq;
+    NSString* pRecordFileName;
+    int pRecordingTime;
+}
+
+-(IBAction)AudioRecordingClick;
+-(NSString *)getFileName;
+-(BOOL) SetAudioSession;
+-(BOOL) AudioRecordingStart;
+-(void) ToolbarRecordButtonToogle:(int)index;
+-(void) timerFired;
+
+@property (strong, nonatomic) AVAudioRecorder* pAudioRecorder;
+@property (strong, nonatomic) AVAudioSession* pAudioSession;
 
 @end
