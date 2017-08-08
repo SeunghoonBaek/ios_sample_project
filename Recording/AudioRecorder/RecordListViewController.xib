@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordListViewController">
+            <connections>
+                <outlet property="PlayerButton" destination="19" id="24"/>
+                <outlet property="pListView" destination="13" id="20"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                    <rect key="frame" x="0.0" y="44" width="375" height="579"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="TvQ-Pw-UAO"/>
+                        <outlet property="delegate" destination="-1" id="23"/>
+                    </connections>
+                </tableView>
+                <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="15">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <barButtonItem width="136" style="plain" systemItem="fixedSpace" id="18"/>
+                        <barButtonItem title="듣기" id="19">
+                            <connections>
+                                <action selector="AudioPlayingClick" destination="-2" id="4sU-Ea-e8V"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="118" style="plain" systemItem="fixedSpace" id="17"/>
+                        <barButtonItem title="E-Mail" id="16">
+                            <connections>
+                                <action selector="EMailClick" destination="-2" id="VZn-S2-pmT"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="Bz3-Sg-BfR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <items>
+                        <barButtonItem width="309" style="plain" systemItem="fixedSpace" id="Jzy-Wr-7Va"/>
+                        <barButtonItem title="녹음" id="ks9-ch-axP">
+                            <connections>
+                                <action selector="AudioListClick" destination="-2" id="ffV-LW-185"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>
