@@ -17,7 +17,7 @@
     [self SetAudioSession];
     
     [recordTimeDisplay setFont:[UIFont fontWithName:@"BDLCDTempBlack" size:48.0]];
-    pDataBase = [RecordDataBase alloc] init];
+    pDataBase = [[RecordDataBase alloc] init];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -44,7 +44,7 @@
         if(self.pAudioRecorder.recording){
             [self.pAudioRecorder stop];
             pGaugeView.value = 0;
-            [pGauageView setNeedsDisplay];
+            [pGaugeView setNeedsDisplay];
             return;
         }
         [[NSFileManager defaultManager] removeItemAtPath:[self.pAudioRecorder.url path] error:nil];
@@ -113,7 +113,7 @@
     
     pRecordingTime = self.pAudioRecorder.currentTime;
     pGaugeView.value = plowPassResults;
-    [pGagueView setNeedsDisplay];
+    [pGaugeView setNeedsDisplay];
 }
 
 -(NSString *) recordTime:(int) num{

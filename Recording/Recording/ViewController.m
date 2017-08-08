@@ -36,15 +36,15 @@
     }
     
     UIView* recordView = pRecordViewController.view;
-    UIView* AUdioRecorderInfoView = pAudioRecorderInfo.view;
+    UIView* AudioRecorderInfoView = pAudioRecorderInfo.view;
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:1];
-    [UIView setAnimationTransition:([RecordView superview] ? UIViewAnimationTransitionFlipFromRight :
+    [UIView setAnimationTransition:([recordView superview] ? UIViewAnimationTransitionFlipFromRight :
                                     UIViewAnimationTransitionFlipFromLeft) forView:self.view cache:YES];
     
-    if([RecordView superview] != nil){
-        [RecordView removeFromSuperview];
+    if([recordView superview] != nil){
+        [recordView removeFromSuperview];
         [self.view addSubview:AudioRecorderInfoView];
     }
     
@@ -58,7 +58,7 @@
 
 -(IBAction) AudioListClick{
     if(pRecordListViewController == nil){
-        RecordListViewController* viewController = [[RecordListView Controller alloc] initWithNibName:@"RecordListViewController" bundle:nil];
+        RecordListViewController* viewController = [[RecordListViewController alloc] initWithNibName:@"RecordListViewController" bundle:nil];
         
         self.pRecordListViewController = viewController;
     }
@@ -68,12 +68,12 @@
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:1];
-    [UIView setAnimationTransition:([RecordView superview] ? UIViewAnimationTransitionCurlUp :
+    [UIView setAnimationTransition:([recordView superview] ? UIViewAnimationTransitionCurlUp :
                                     UIViewAnimationTransitionCurlDown) forView:self.view cache:YES];
     
-    if([RecordView superview] != nil){
-        [RecordView removeFromSuperview];
-        [self.view addSubview:AudioRecorderInfoView];
+    if([recordView superview] != nil){
+        [recordView removeFromSuperview];
+        [self.view addSubview:pAudioRecorderInfo];
         [self.pRecordListViewController viewDidAppear:YES];
         [self.pRecordViewController viewDidAppear:NO];
     }
